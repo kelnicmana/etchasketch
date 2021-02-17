@@ -15,6 +15,12 @@ function addPixel() {
     let black = document.querySelectorAll(".pixel");
 
     for (let i = 0; i < black.length; i++) {
+        black[i].addEventListener("touchmove", function() {
+            black[i].classList.add("black");
+        });
+    }
+
+    for (let i = 0; i < black.length; i++) {
         black[i].addEventListener("mouseover", function() {
             black[i].classList.add("black");
         });
