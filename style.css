@@ -1,0 +1,62 @@
+#centerDesign {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#design {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 26rem;
+    height: auto;
+    padding: 3rem 1rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+#container {
+    align-self: center;
+    background-color: white;
+    width: 20rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: stretch;
+    border: 1px solid gray;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid rgba(200,200,200,1);
+}
+
+#btn, #expand {
+    margin: 1rem;
+}
+
+#centerButtons {
+    display: flex;
+    justify-content: center;
+}
+
+#circles {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftCircle, #rightCircle {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+#etchasketch {
+    font-family: 'Yellowtail', cursive;
+    font-size: 2rem;
+    align-self: center;
+}
