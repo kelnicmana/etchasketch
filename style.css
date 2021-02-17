@@ -2,16 +2,19 @@
     padding: 2rem;
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 #design {
-    background-color: red;
+    background-image: linear-gradient(to right bottom, rgb(250,0,0), rgb(240,0,0), rgb(220,0,0));
     display: flex;
     flex-direction: column;
     width: 26rem;
     height: auto;
-    padding: 3rem 1rem 1rem 1rem;
-    border-radius: 1rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+    border: 1px solid rgb(220,0,0);
+    border-radius: 10px;
+    box-shadow: 0.1rem 0.1rem 0.2rem black;
 }
 
 #container {
@@ -24,16 +27,31 @@
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: stretch;
-    border: 1px solid gray;
+    border: 1px solid rgba(50,50,50,1);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: -0.1rem -0.1rem 0.2rem rgba(50,50,50,1);
 }
 
 .pixel {
     background-color: white;
-    border: 1px solid rgba(200,200,200,1);
 }
 
-#btn, #expand {
+.black {
+    background-color: black;
+}
+
+#expand {
     margin: 1rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(100,100,100,1);
+    border-radius: 5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+#expand:hover {
+    box-shadow: 0.1rem 0.1rem 0.25rem;
 }
 
 #centerButtons {
@@ -53,10 +71,28 @@
     background-color: white;
     border: 1px solid gray;
     border-radius: 50%;
+    box-shadow: 0.1rem 0.1rem 0.25rem;
 }
 
 #etchasketch {
     font-family: 'Yellowtail', cursive;
     font-size: 2rem;
     align-self: center;
+    color: rgb(255,223,0);
+    text-shadow: 1px 1px black;
+}
+
+@media only screen and (max-width: 400px) {
+    #design {
+        width: 20rem;
+    }
+
+    #container {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    #etchasketch {
+        font-size: 1.25rem;
+    }
 }
