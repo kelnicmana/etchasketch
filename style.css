@@ -2,6 +2,7 @@
     margin: 0;
     padding: 1rem 0rem;
     background-color:rgb(240,240,240);
+    pointer-events: none;
 }
 
 #centerDesign {
@@ -9,6 +10,7 @@
     padding: 4rem 0.5rem 2rem 0.5rem;
     display: flex;
     justify-content: center;
+    pointer-events: none;
 }
 
 #design {
@@ -29,8 +31,6 @@
     width: 20rem;
     height: 20rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: stretch;
     border: 1px solid rgba(50,50,50,1);
@@ -41,28 +41,12 @@
 
 .pixel {
     background-color: white;
-}
-
-.black {
-    background-color: black;
-}
-
-#expand {
-    margin: 1rem;
-    padding: 0.75rem;
-    background-color: rgb(0,230,150);
-    border: 1px solid rgb(100,100,100);
-    border-radius: 5rem;
-    font-size: 1rem;
-    outline: none;
-}
-
-#expand:hover {
-    box-shadow: 0.1rem 0.1rem 0.25rem;
+    pointer-events: all;
 }
 
 #centerButtons {
     display: flex;
+    flex-direction: column;
     background-color: transparent;
     justify-content: center;
     align-items: center;
@@ -93,8 +77,18 @@
     text-shadow: 1px 1px black;
 }
 
-#color-picker {
-    margin-right: 0.5rem;
+#color {
+    margin: 0.5rem;
+    pointer-events: all;
+}
+
+#gridSize {
+    pointer-events: all;
+}
+
+label {
+    font-family: Verdana, Tahoma, sans-serif;
+    margin-bottom: 1rem;;
 }
 
 @media only screen and (max-width: 400px) {
