@@ -14,11 +14,20 @@ function addPixel() {
     }
     let black = document.querySelectorAll(".pixel");
 
-    for (let i = 0; i < black.length; i++) {
-        black[i].addEventListener("touchmove", function() {
-            black[i].classList.add("black");
-        });
-    }
+    
+    this.container.addEventListener("touchstart", function(e) {
+        if (e.touches.length == 1) {
+            e.preventDefault();
+        }
+    });
+
+    this.container.addEventListener("touchmove", function(e) {
+        var touch = e.touches[0];
+        var selected = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (selected) {
+        selected.classList.add("black");
+        }
+    });
 
     for (let i = 0; i < black.length; i++) {
         black[i].addEventListener("mouseover", function() {
