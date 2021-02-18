@@ -9,6 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body id="body">
+    <input type="range" id="gridSize" name="gridSize" min="2" max="100" value="40">
+    <label for="gridSize">Pixel density</label>
     <div id="centerDesign">
         <div id="design">
             <div id="container">
@@ -21,10 +23,17 @@
         </div>
     </div>
     <div id="centerButtons">
-        <input type="color" id="color" name="color" value="black">
-        <label for="color"> Choose color</label>
-        <input type="range" id="gridSize" name="gridSize" min="2" max="100" value="40">
-        <label for="gridSize">Pixel density</label>
+        <div id="left">
+            <input type="color" id="color" name="color" value="black">
+            <label for="color"> Choose color</label>
+            </div>
+        <div id="right">
+            <label class="switch">
+                <input id="rainboxCheck" type="checkbox" name="rainbowCheck">
+                <span class="slider round"></span>
+            </label>
+            <label>Random colors</label>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

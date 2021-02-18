@@ -1,6 +1,26 @@
 let pixelsArea;
 var colorSelection = document.getElementById("color").value;
+var randomColors;
 var gridSize = document.getElementById("gridSize").value;
+let rainbow = false;
+var checkbox = document.querySelector("input[name=rainbowCheck]");
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    rainbow = true;
+  }
+  else {
+    rainbow = false;
+  }
+});
+
+function rainbowToggle() {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+    const r = randomBetween(0, 255);
+    const g = randomBetween(0, 255);
+    const b = randomBetween(0, 255);
+    randomColors = `rgb(${r},${g},${b})`;
+}
 
 document.getElementById("color").onchange = function() {
     colorSelection = this.value;
@@ -53,7 +73,13 @@ function addPixel() {
         var touch = e.touches[0];
         var selected = document.elementFromPoint(touch.clientX, touch.clientY);
         if (selected) {
+            if (rainbow === true) {
+                rainbowToggle();
+                selected.style.cssText = `background-color: ${randomColors}`;
+            }
+            else {
             selected.style.cssText = `background-color: ${colorSelection}`;
+            }
         }
     });
     
@@ -61,7 +87,13 @@ function addPixel() {
     /// adds selected color on pc/laptop
     for (let i = 0; i < black.length; i++) {
         black[i].addEventListener("mouseover", function() {
-            black[i].style.cssText = `background-color: ${colorSelection}`;
+            if (rainbow === true) {
+                rainbowToggle();
+                black[i].style.cssText = `background-color: ${randomColors}`;
+            }
+            else {
+                black[i].style.cssText = `background-color: ${colorSelection}`;
+            }
         });
     }
 }
