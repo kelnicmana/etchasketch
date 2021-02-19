@@ -1,13 +1,13 @@
 #body {
     margin: 0;
     padding: 1rem 0rem;
-    background-color:rgb(240,240,240);
+    background-color:rgb(230,230,230);
     text-align: center;
     pointer-events: none;
 }
 
 #centerDesign {
-    background-color:rgb(240,240,240);
+    background-color:rgb(230,230,230);
     padding: 2rem 0.5rem 2rem 0.5rem;
     display: flex;
     justify-content: center;
@@ -47,9 +47,17 @@
 
 #centerButtons {
     display: flex;
-    background-color: transparent;
+    justify-content: center;
+}
+
+#centerButtonsColor {
+    display: flex;
     justify-content: space-around;
-    align-items: center;
+    width: 26rem;
+    background-color: #F8E473;
+    padding: 0.5rem;
+    border: 1px solid rgb(235,200,0);
+    border-radius: 1.25rem;
 }
 
 #circles {
@@ -79,8 +87,25 @@
 
 #color {
     margin: 0.5rem;
-    background-color: transparent !important;
+    background-color: rgb(240,240,240) !important;
     pointer-events: all;
+}
+
+#rangeCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rangeCenterColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26rem;
+    background-color: #F8E473;
+    padding: 0.5rem;
+    border: 1px solid rgb(235,200,0);
+    border-radius: 1rem;
 }
 
 #gridSize {
@@ -89,6 +114,9 @@
 
 label {
     font-family: Verdana, Tahoma, sans-serif;
+}
+
+#left {
 }
 
 #right {
@@ -101,7 +129,7 @@ label {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 30px;
     margin-right: 0.5rem;
     pointer-events: all;
     background-color: transparent !important;
@@ -130,9 +158,9 @@ label {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    height: 22px;
+    width: 22px;
+    left: 6px;
     bottom: 4px;
     background-color: white !important;
     -webkit-transition: .4s;
